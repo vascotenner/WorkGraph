@@ -1,10 +1,11 @@
 #!/usr/bin/env python
-from datetime import date
 import matplotlib.pyplot as plt
 import numpy as np
+from os.path import expanduser
+home = expanduser("~")
 keystrokes=[]
 clicks=[]
-f=open('/home/brett/.workrave/historystats', 'r')
+f=open(home+'/.workrave/historystats', 'r')
 for line in f:
   if line[0]=='m':
     # Ignore 'm ' and '\n'
